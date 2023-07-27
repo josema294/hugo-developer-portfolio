@@ -19,9 +19,9 @@
                 {{$page3 := index $page2 1}}
                 {{if eq $aURL3 $page3}}
                 <li class="uk-active"><a style="font-size: 18px; text-transform:none"
-                        href="{{ .URL | relURL }}">{{.Name}}</a></li>
+                        href="{{ .URL | relURL }}">{{i18n .Identifier}}</a></li>
                 {{else}}
-                <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}">{{.Name}}</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}">{{i18n .Identifier}}</a></li>
                 {{end}}
                 {{end}}
             </ul>
@@ -51,9 +51,9 @@
             {{$aURL3 := index $aURL2 1}}
             {{$page3 := index $page2 1}}
             {{if eq $aURL3 $page3}}
-            <li class="uk-active"><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.i18n .Identifier}}</a></li>
             {{else}}
-            <li><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
+            <li><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.i18n .Identifier}}</a></li>
             {{end}}
             {{end}}
         </ul>
